@@ -1,5 +1,5 @@
 <header>
-        <h1>SvelkitKit Lens Api Demo</h1>
+        <h1>SvelteKit Lens Protocol Demo</h1>
         <nav>
             <a href="/">Home</a>
             <a href="/profiles">Profiles</a>
