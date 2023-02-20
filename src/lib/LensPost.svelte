@@ -10,8 +10,9 @@
             <img src="{anoIconUrl}" loading="lazy"  alt="profile image {post?.profile?.handle}" />
         {/if}
         {#if post?.profile?.handle}
-        <br/>
-            {post.profile.handle}
+        <p>
+                {post.profile.handle}
+        </p>
         {/if}
     </div>
     <div class="right">
@@ -30,10 +31,19 @@
         margin:10px;
         padding:10px;
         display:flex;
+        
     }
     .post .left{
-        width:150px;
+        min-width:125px;
+        max-width: 125px;
         text-align:center;
+    }
+    .profile p{
+        font-size: 0.9em;
+        width: calc(100 - 20px);
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
     .profile img{
         width:60px;
@@ -41,13 +51,19 @@
         border-radius:50%;
         margin: 10px;
     }
+    .post .right{
+        width: calc(100% - 110px);
+        max-width:500px;
+    }
     .post .right p{
         padding:10px;
-        max-width:500px;
+        width: calc(100% - 20px);
         font-size: 0.9em;
+       
     }
     .post .right img{
         margin: 10px;
+        width: calc(100% - 20px);
         max-width:300px;
         border-radius: 10px;
     }
